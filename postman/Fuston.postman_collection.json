@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "9b0d5996-9fa7-4cdd-8ada-dafddc339e96",
+		"name": "Fuston",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Wheather by city name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.openweathermap.org/data/2.5/weather?q=São Paulo&APPID={{API Key}}",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "São Paulo"
+						},
+						{
+							"key": "APPID",
+							"value": "{{API Key}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wheather by latitude x longitude",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?lat=48.8566419&lon=2.3518481&appid={{API Key}}",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "48.8566419"
+						},
+						{
+							"key": "lon",
+							"value": "2.3518481"
+						},
+						{
+							"key": "appid",
+							"value": "{{API Key}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API Key",
+			"value": "cda6a741c74c3293c872695a6ce843bf"
+		}
+	]
+}
